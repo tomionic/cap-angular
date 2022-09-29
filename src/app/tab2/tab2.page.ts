@@ -6,7 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
+  maxPickupDate: Date | string;
 
   constructor() {}
+
+  ngOnInit() {
+    let formatMaxDate = new Date();
+    formatMaxDate.setDate(formatMaxDate.getDate() + 29);
+    this.maxPickupDate = formatMaxDate.toISOString();
+  }
 
 }

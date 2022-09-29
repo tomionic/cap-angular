@@ -36,9 +36,12 @@ export class Tab1Page implements OnInit {
       this.minPickupDate = this.orderHeader?.willCallDateTime;
     }
 
-    let formatMaxDate = new Date(this.minPickupDate);
+    let formatMaxDate = new Date();;
     formatMaxDate.setDate(formatMaxDate.getDate() + 30);
+
+    console.log(formatMaxDate);
     this.maxPickupDate = formatMaxDate.toISOString();
+    console.log(this.maxPickupDate);
 
     if (this.orderHeader?.orderType === 'WC') {
       this.editMode = true;

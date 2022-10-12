@@ -37,7 +37,7 @@ export class Tab1Page implements OnInit {
     }
 
     let formatMaxDate = new Date();;
-    formatMaxDate.setDate(formatMaxDate.getDate() + 30);
+    formatMaxDate.setDate(formatMaxDate.getDate() + 31);
 
     console.log(formatMaxDate);
     this.maxPickupDate = formatMaxDate.toISOString();

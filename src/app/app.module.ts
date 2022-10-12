@@ -9,6 +9,8 @@ import { AppComponent } from './app.component';
 import { FormBuilder } from '@angular/forms';
 import { DatePipe } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AppRate } from '@ionic-enterprise/app-rate/ngx';
+import { SafariViewController } from '@awesome-cordova-plugins/safari-view-controller/ngx';
 
 @NgModule({
   declarations: [AppComponent],
@@ -19,7 +21,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     FormBuilder,
-    DatePipe],
+    DatePipe,
+    AppRate,
+    SafariViewController],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
